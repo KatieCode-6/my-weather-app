@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import CurrentDate from "./CurrentDate";
 import axios from "axios";
 import "./Weather.css";
 
@@ -14,7 +15,7 @@ export default function Weather(props) {
             humidity: response.data.main.humidity,
             description: response.data.weather[0].description,
             iconUrl: "https://cdn3.iconfinder.com/data/icons/photography-54/64/sunny-mode-camera-photography-512.png",
-            date: "Sonday 21:00",
+            date: new Date(response.data.dt * 1000),
 
             
 
@@ -39,7 +40,10 @@ export default function Weather(props) {
             <h1>{weatherData.city}</h1>
          
         <ul>
-            <li>{weatherData.date}</li>
+            <li>
+                <CurrentDate date={weatherData.date} />
+            </li>
+
             <li className="text-capitalize">{weatherData.description}</li>
         </ul>
     
