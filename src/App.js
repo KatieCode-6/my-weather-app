@@ -8,9 +8,9 @@ export default function App() {
   <Weather defaultCity="London"/>
   <footer>
     This project is created by
-     <a href="https://www.katiekovacova.co.uk/education.html" target="_blank"> Katie Kovacova </a>
+     <a href="https://www.katiekovacova.co.uk/education.html" rel="noreferrer" target="_blank"> Katie Kovacova </a>
     and is {" "}   
-  <a href ="https://github.com/KatieCode-6/my-weather-app"
+  <a href ="https://github.com/KatieCode-6/my-weather-app" rel="noreferrer"
   target="_blank" >
     open-sources on GitHub
   </a>
